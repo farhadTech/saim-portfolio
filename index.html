@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Interactive Sticky Navbar with Tailwind CSS</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body class="bg-gray-100">
+		<!-- Navbar -->
+		<header class="bg-white shadow-md sticky top-0 z-50">
+			<div
+				class="container mx-auto px-6 py-4 flex items-center justify-between"
+			>
+				<!-- Logo -->
+				<a
+					href="#home"
+					class="text-2xl font-bold text-blue-600 logo rounded-lg"
+				>
+					C.SAIM
+				</a>
+
+				<!-- Navigation Links (Desktop) -->
+				<nav class="hidden md:flex justify-center items-center space-x-6">
+					<ul class="flex space-x-6">
+						<li><a href="#home" class="nav-link">Home</a></li>
+						<li><a href="#about" class="nav-link">About</a></li>
+						<li><a href="#skills" class="nav-link">Skills</a></li>
+						<li><a href="#blog" class="nav-link">Blog</a></li>
+						<li><a href="#cv" class="nav-link">CV</a></li>
+						<li><a href="#contact" class="block nav-link">Contact-Me</a></li>
+						<li>
+							<a
+								href="#signin"
+								class="text-blue-600 border border-blue-600 px-4 py-2 rounded-lg hover:bg-blue-600 hover:text-white transition duration-300 transform hover:scale-105"
+								>Sign In</a
+							>
+						</li>
+					</ul>
+				</nav>
+
+				<!-- Hamburger Icon (Mobile) -->
+				<div class="md:hidden">
+					<button
+						id="menu-btn"
+						class="text-gray-600 focus:outline-none focus:text-blue-600"
+					>
+						<svg
+							class="w-8 h-8"
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M4 6h16M4 12h16m-7 6h7"
+							/>
+						</svg>
+					</button>
+				</div>
+			</div>
+
+			<!-- Mobile Menu -->
+			<div id="menu" class="md:hidden bg-white shadow-lg w-full py-4 hidden">
+				<nav class="space-y-4 px-6">
+					<a href="#home" class="block nav-link">Home</a>
+					<a href="#about" class="block nav-link">About</a>
+					<a href="#skills" class="block nav-link">Skills</a>
+					<a href="#blog" class="block nav-link">Blog</a>
+					<a href="#cv" class="block nav-link">CV</a>
+					<a href="#contact" class="block nav-link">Contact-Me</a>
+					<a
+						href="#signin"
+						class="block text-blue-600 border border-blue-600 px-4 py-2 text-center rounded-lg hover:bg-blue-600 hover:text-white transition duration-300 transform hover:scale-105"
+						>Sign In</a
+					>
+				</nav>
+			</div>
+		</header>
+
+		<!-- Hero Section -->
+		<section
+			class="flex items-center justify-between py-20 px-6 bg-blue-50 relative w-full max-w-screen-lg mx-auto"
+		>
+			<!-- Left Side (Heading & Paragraph) -->
+			<div class="w-full md:w-1/2 space-y-6 hero-heading">
+				<h1
+					class="text-4xl md:text-5xl font-bold text-blue-600 hero-heading animate__animated animate__fadeIn max-w-90%"
+				>
+					I am <br />
+					Muhammad Zohir Uddin Saim
+				</h1>
+				<p
+					class="text-lg text-gray-700 hero-paragraph animate__animated animate__fadeIn"
+				>
+					I am a passionate developer with expertise in Full-Stack Web
+					Development and a love for learning new technologies. I believe in
+					creating clean, efficient, and user-friendly web applications.
+				</p>
+			</div>
+
+			<!-- Right Side (Image) -->
+			<div class="w-full md:w-1/2 flex justify-center">
+				<img
+					src="/image/saim.jpg"
+					alt="Muhammad Zohir Uddin Saim"
+					class="w-64 md:w-80 rounded-full shadow-lg hero-image"
+				/>
+			</div>
+		</section>
+
+		<!-- Scroll Button -->
+		<div class="flex justify-center mt-10">
+			<a
+				href="#about"
+				class="text-blue-600 hover:bg-blue-600 hover:text-white transition-all scroll-btn"
+			>
+				<!-- Down Arrow Icon -->
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="w-8 h-8 animate-bounce"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M5 15l7 7 7-7"
+					/>
+				</svg>
+			</a>
+		</div>
+
+		<!-- About Section (for demo) -->
+		<section id="about" class="py-20 px-6 bg-gray-200">
+			<h2 class="text-3xl font-bold text-center">About Me</h2>
+			<p class="text-center mt-4 text-gray-700">
+				This is where the about section content will be.
+			</p>
+		</section>
+		<!-- JavaScript for toggling the mobile menu -->
+		<script src="script.js"></script>
+	</body>
+</html>
